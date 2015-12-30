@@ -21,28 +21,29 @@ If redis isn't installed, get it [here][2]
 
 ### Run
 
-* Run web-server:
-
+Run web-server:
+```
     $ rails s
-
-* Run resque (this will start 3 workers that will listen to all queues)
-
+```
+Run resque
+```
+    # this will start 3 resque workers that will listen to all queues
     $ bundle exec rake resque:workers QUEUE='*' COUNT=3
-
-* Go to _localhost:3000_, create a new post, and click the _Schedule Serially Tasks_ link next to it. For the sake of an experiment,
-you can click the link multiple times, the Serially tasks for each post will still run only once.
+```
+Go to _localhost:3000_, create a new post, and click the _Schedule Serially Tasks_ link next to it. For the sake of an experiment,
+you can click the link multiple times, the tasks for each post will still run only once.
 
 ### View Results
 
-* Give it 30 seconds, refresh _localhost:3000_, and you should see the columns 'Drafted by', 'Reviewed by', and 'Published By' filled
+Give it 30 seconds, refresh _localhost:3000_, and you should see the columns _Drafted by_, _Reviewed by_, and _Published By_ filled with values
 
 ### Monitor
 
-* Go to _localhost:3000/resque_ to see a Serially::Worker job being added to `serially` queue every time you click _Schedule Serially Tasks_
+* Go to _localhost:3000/resque_ to see a job being added to `serially` queue for every post on which you click _Schedule Serially Tasks_
 * Monitor the resque log to see what's going on:
-
+```
     $ tail -f ./log/resque.log
-
+```
 
 [1]: https://github.com/mikemarsian/serially
 [2]: http://redis.io/
