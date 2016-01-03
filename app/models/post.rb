@@ -11,14 +11,19 @@ class Post < ActiveRecord::Base
   end
 
   def review
-    self.complete(:reviewed_by)
-    true
+    if rand > 0.5
+      [false, 'No reviewer available']
+    else
+      self.complete(:reviewed_by)
+      true
+    end
   end
 
   def publish
     self.complete(:published_by)
-    true
+    [true, 'Post published!']
   end
+
 
   def complete(action)
     name = Faker::Name.name

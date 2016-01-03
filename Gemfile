@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 
+#gem 'serially'
 gem 'serially', :git => 'git://github.com/mikemarsian/serially.git'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'resque'
-gem 'faker'
+gem 'faker', '~> 1.6'
 
 # *** front-end stuff ***
 gem 'sass-rails', '~> 5.0'
@@ -26,8 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 group :development, :test do
-  # Call 'debugger' anywhere in the code to stop execution and get a debugger console
-  gem 'debugger'
+  gem 'hirb'
 end
 
 group :development do

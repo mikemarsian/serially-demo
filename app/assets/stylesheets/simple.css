@@ -48,8 +48,9 @@ ul.nav li a {
   color: #b94a48;
 }
 
-table tr td:empty {
-    width: 80px;
+table tr td:empty, table th {
+    width: 100px;
+    padding-right: 10px;
 }
 
 table tr td {

@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/mikemarsian/serially.git
-  revision: 1bf8a9be266e57236a87c3695533edeb6c74d1b4
+  revision: 8733c3260db8e02faf025640d167d871a3b5ac23
   specs:
-    serially (0.1.0)
-      activerecord (~> 4.2.5)
-      resque (>= 1.2)
+    serially (0.1.2)
+      activerecord (~> 4.2)
+      resque (~> 1.2)
       resque-lonely_job
 
 GEM
@@ -56,21 +56,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    columnize (0.9.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
-    debugger (1.6.8)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.3.5)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.3.8)
     erubis (2.7.0)
     execjs (2.6.0)
-    faker (1.3.0)
+    faker (1.6.1)
       i18n (~> 0.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    hirb (0.7.3)
     i18n (0.7.0)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -181,8 +175,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.1.0)
-  debugger
-  faker
+  faker (~> 1.6)
+  hirb
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.5)

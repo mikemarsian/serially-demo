@@ -8,18 +8,25 @@
       <th>Drafted by</th>
       <th>Reviewed by</th>
       <th>Published by</th>
-      <th colspan="3"></th>
+      <th>Last task finished</th>
+      <th>Last task status</th>
+      <th>Last task result message</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @posts.each do |post| %>
+      <% last_task = post.serially.task_runs.finished.last %>
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
         <td><%= post.drafted_by %></td>
         <td><%= post.reviewed_by %></td>
         <td><%= post.published_by %></td>
+        <td><%= last_task.try(:task_name) %></td>
+        <td><%= last_task.try(:status) %></td>
+        <td><%= last_task.try(:result_message) %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= schedule_link(post) %></td>
