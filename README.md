@@ -31,11 +31,12 @@ Run resque
     $ bundle exec rake resque:workers QUEUE='*' COUNT=3 TERM_CHILD=1
 ```
 Go to _localhost:3000_, create a new post, and click the _Schedule Serially Tasks_ link next to it. For the sake of an experiment,
-you can click the link multiple times, the tasks for each post will still run only once.
+you can click the link multiple times, the tasks for the post will still run only once.
 
 ### View Results
 
-Give it 30 seconds, refresh _localhost:3000_, and you should see the columns _Drafted by_, _Reviewed by_, and _Published By_ filled with values
+Give it 15 seconds, refresh _localhost:3000_, and you should see the columns _Drafted by_, _Reviewed by_, and _Published By_ filled with values.
+_Last task_ columns display info on the last task that ran for each post.
 
 ### Monitor
 
