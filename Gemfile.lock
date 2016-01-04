@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mikemarsian/serially.git
-  revision: 8733c3260db8e02faf025640d167d871a3b5ac23
+  revision: 980cb192b13afb05bf53b289ecbed7ef7b722e4f
   specs:
     serially (0.1.2)
       activerecord (~> 4.2)

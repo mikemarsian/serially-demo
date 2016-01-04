@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
   include Serially
 
-  serially do
+  serially in_queue: 'posts' do
     task :draft do |post|
       post.complete(:drafted_by)
       true

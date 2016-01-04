@@ -27,8 +27,8 @@ Run web-server:
 ```
 Run resque
 ```
-    # this will start 3 resque workers that will listen to all queues
-    $ bundle exec rake resque:workers QUEUE='*' COUNT=3 TERM_CHILD=1
+    # this will start 3 resque workers that will listen to the 'posts' queue
+    $ bundle exec rake resque:workers QUEUE='posts' COUNT=3 TERM_CHILD=1
 ```
 Go to _localhost:3000_, create a new post, and click the _Schedule Serially Tasks_ link next to it. For the sake of an experiment,
 you can click the link multiple times, the tasks for the post will still run only once.
