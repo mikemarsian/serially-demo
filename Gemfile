@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 
-#gem 'serially'
-gem 'serially', :git => 'git://github.com/mikemarsian/serially.git'
+gem 'serially'
+#gem 'serially', :git => 'git://github.com/mikemarsian/serially.git'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
